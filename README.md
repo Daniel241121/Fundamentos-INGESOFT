@@ -4,7 +4,7 @@
 Innovadores del Software
 
 ## Nombre del proyecto
-Plataforma de Gestión de Actividades Universitarias
+SmartPick
 
 ---
 
