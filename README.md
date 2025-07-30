@@ -66,7 +66,7 @@ Soy una persona apasionada por la tecnología y me encanta investigar constantem
 
 
 ### 👤 **Andrés Felipe Barrios Bohórquez**  
-<img width="113" height="143" alt="Captura de pantalla 2025-07-30 122226" src="https://github.com/user-attachments/assets/a48cf735-3d4e-4905-bef1-8195f21fa001" />
+<img width="113" height="143" alt="Captura de pantalla 2025-07-30 122226" src="https://github.com/user-attachments/assets/a48cf735-3d4e-4905-bef1-8195f21fa001" />.
 **GitHub:** [Andres2649](https://github.com/Andres2649)  
 **Rol:** Líder de gestión y diseño  
 **Biografía:**  
@@ -81,7 +81,7 @@ Soy estudiante de Ingeniería de Sistemas y Administración de Empresas, actualm
 ---
 
 ### 👤 **Edwin Gerardo Quiñones Suárez**  
-<img width="116" height="236" alt="Captura de pantalla 2025-07-30 122746" src="https://github.com/user-attachments/assets/26bb786b-0512-45a4-abae-066c920315df" />
+<img width="116" height="236" alt="Captura de pantalla 2025-07-30 122746" src="https://github.com/user-attachments/assets/26bb786b-0512-45a4-abae-066c920315df" />.
 **GitHub:** [Edwin623](https://github.com/Edwin623)  
 **Rol:** Encargado de calidad  
 **Biografía:**  
