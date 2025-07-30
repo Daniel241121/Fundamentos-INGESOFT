@@ -13,7 +13,8 @@ Plataforma de Gestión de Actividades Universitarias
 ---
 
 ### 👤 **Daniel Alejandro Castro Gómez**  
-<img src="https://github.com/user-attachments/assets/19028174-b51d-4661-874f-6bb620471542" alt="Daniel Alejandro Castro Gómez" width="140" height="170">  
+<img src="https://github.com/user-attachments/assets/19028174-b51d-4661-874f-6bb620471542" alt="Daniel Alejandro Castro Gómez" width="140" height="170">.
+
 **GitHub:** [Daniel241121](https://github.com/Daniel241121)  
 **Rol:** Líder de proyecto  
 **Biografía:**  
@@ -26,7 +27,7 @@ Mi nombre es Daniel Alejandro Castro Gómez, estudiante de Ingeniería de Sistem
 ---
 
 ### 👤 **Luis Ernesto Bueno Solano**  
-<img src="https://github.com/user-attachments/assets/8c7489d3-3176-48bd-a1b6-de5b3bbd49a8" alt="Luis Ernesto Bueno Solano" width="140" height="170">  
+<img src="https://github.com/user-attachments/assets/8c7489d3-3176-48bd-a1b6-de5b3bbd49a8" alt="Luis Ernesto Bueno Solano" width="140" height="170">.  
 **GitHub:** [Luis-bu](https://github.com/Luis-bu)  
 **Rol:** Desarrollador backend  
 **Biografía:**  
@@ -45,7 +46,7 @@ Creo firmemente que el conocimiento no sirve de mucho si no se usa para mejorar 
 ---
 
 ### 👤 **Juan David Garzón Ballén**  
-<img src="https://github.com/user-attachments/assets/96ef6019-0d81-4037-9ce0-3a78419816fc" alt="Juan David Garzón Ballén" width="140" height="170">  
+<img src="https://github.com/user-attachments/assets/96ef6019-0d81-4037-9ce0-3a78419816fc" alt="Juan David Garzón Ballén" width="140" height="170">.  
 **GitHub:** [lJuam](https://github.com/lJuam)  
 **Rol:** Encargado de integración de servicios  
 **Biografía:**  
@@ -62,7 +63,7 @@ Soy una persona apasionada por la tecnología y me encanta investigar constantem
 ---
 
 ### 👤 **Andrés Felipe Barrios Bohórquez**  
-<img src="https://github.com/user-attachments/assets/a48cf735-3d4e-4905-bef1-8195f21fa001" alt="Andrés Felipe Barrios Bohórquez" width="140" height="170">  
+<img src="https://github.com/user-attachments/assets/a48cf735-3d4e-4905-bef1-8195f21fa001" alt="Andrés Felipe Barrios Bohórquez" width="140" height="170">.  
 **GitHub:** [Andres2649](https://github.com/Andres2649)  
 **Rol:** Líder de gestión y diseño  
 **Biografía:**  
@@ -77,7 +78,7 @@ Soy estudiante de Ingeniería de Sistemas y Administración de Empresas, actualm
 ---
 
 ### 👤 **Edwin Gerardo Quiñones Suárez**  
-<img src="https://github.com/user-attachments/assets/26bb786b-0512-45a4-abae-066c920315df" alt="Edwin Gerardo Quiñones Suárez" width="140" height="170">  
+<img src="https://github.com/user-attachments/assets/26bb786b-0512-45a4-abae-066c920315df" alt="Edwin Gerardo Quiñones Suárez" width="140" height="170">.  
 **GitHub:** [Edwin623](https://github.com/Edwin623)  
 **Rol:** Encargado de calidad  
 **Biografía:**  
