@@ -1,7 +1,7 @@
 # Presentación del Grupo
 
 ## Nombre del grupo
-Innovadores del Software
+visionarios
 
 ## Nombre del proyecto
 SmartPick
