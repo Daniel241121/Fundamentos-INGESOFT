@@ -1,65 +1,63 @@
-// src/config/database.js
-const { Pool } = require("pg");
-const logger = require("../utils/logger");
-require("dotenv").config();
+const { Pool } = require('pg');
+const logger = require('../utils/logger');
 
 class DatabaseConnection {
   static instance = null;
 
   constructor() {
-    if (DatabaseConnection.instance) {
-      return DatabaseConnection.instance;
+    if (DatabaseConnection.instance) return DatabaseConnection.instance;
+
+    const rawUrl = process.env.DATABASE_URL;
+
+    if (!rawUrl) {
+      logger.error('DATABASE_URL no está definido en las variables de entorno');
+      throw new Error('DATABASE_URL is required');
     }
 
-    console.log("📦 Creando Pool de PostgreSQL...");
-    console.log("   DATABASE_URL =", process.env.DATABASE_URL);
+    const url = new URL(rawUrl);
+    url.searchParams.set('pgbouncer', 'true'); // FORZAR SESSION MODE
+
+    logger.log('Creando Pool de PostgreSQL (session mode)...');
+    logger.log('   DATABASE_URL = ' + url.toString());
 
     this.pool = new Pool({
-      connectionString: process.env.DATABASE_URL,
-      ssl: {
-        rejectUnauthorized: false, // necesario para Supabase
-      },
+      connectionString: url.toString(),
+      ssl: { rejectUnauthorized: false },
+      max: 5,
+      connectionTimeoutMillis: 10000,
+      idleTimeoutMillis: 10000,
     });
 
-    this.pool.on("error", (err) => {
-      logger.error("Unexpected error on idle client", err);
+    this.pool.on('error', (err) => {
+      logger.error('Pool error (idle client)', err);
     });
 
     DatabaseConnection.instance = this;
   }
 
   static getInstance() {
-    if (!DatabaseConnection.instance) {
-      new DatabaseConnection();
-    }
+    if (!DatabaseConnection.instance) new DatabaseConnection();
     return DatabaseConnection.instance;
   }
 
   async query(text, params = []) {
+    let client;
     try {
-      const result = await this.pool.query(text, params);
+      client = await this.pool.connect();
+      const result = await client.query(text, params);
       return result.rows;
     } catch (error) {
-      logger.error("Database query error", error);
+      logger.error('Database query error', error);
       throw error;
+    } finally {
+      if (client) client.release();
     }
   }
 
   async connectDatabase() {
-    try {
-      const result = await this.pool.query("SELECT NOW()");
-      logger.log("Database connection successful");
-      return result;
-    } catch (error) {
-      logger.error("Database connection failed", error);
-      throw error;
-    }
+    await this.query('SELECT NOW()');
+    logger.log('Database connection successful');
   }
 }
 
-const connectDatabase = async () => {
-  const db = DatabaseConnection.getInstance();
-  await db.connectDatabase();
-};
-
-module.exports = { DatabaseConnection, connectDatabase };
+module.exports = { DatabaseConnection };

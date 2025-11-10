@@ -1,0 +1,15 @@
+[2025-11-08T15:27:32.869Z] ERROR: Failed to start server - Invalid API key
+[2025-11-08T16:17:41.504Z] ERROR: ⏰ [createProduct] La consulta a la DB está tardando demasiado
+[2025-11-08T16:17:41.521Z] ERROR: Database query error - Error: Connection terminated due to connection timeout
+    at eval (/home/Daniel241121/Fundamentos-INGESOFT/smartpick-backend/node_modules/pg-pool/index.js:45:11)
+    at <anonymous> (https://fundamentosingesoft-ctqz-5g8s8t40.w-corp-staticblitz.com/blitz.cf284e50.js:31:29480)
+[2025-11-08T16:17:41.531Z] ERROR: ❌ [createProduct] Error creando producto - Error: Connection terminated due to connection timeout
+    at eval (/home/Daniel241121/Fundamentos-INGESOFT/smartpick-backend/node_modules/pg-pool/index.js:45:11)
+    at <anonymous> (https://fundamentosingesoft-ctqz-5g8s8t40.w-corp-staticblitz.com/blitz.cf284e50.js:31:29480)
+[2025-11-10T02:25:02.474Z] ERROR: Error logging in - Error: Invalid credentials
+    at UserService.login (/home/Daniel241121/Fundamentos-INGESOFT/smartpick-backend/src/services/UserService.js:54:15)
+    at async AuthController.login (/home/Daniel241121/Fundamentos-INGESOFT/smartpick-backend/src/controllers/AuthController.js:44:22)
+[2025-11-10T02:25:02.485Z] ERROR: Error en login - Error: Invalid credentials
+    at UserService.login (/home/Daniel241121/Fundamentos-INGESOFT/smartpick-backend/src/services/UserService.js:54:15)
+    at async AuthController.login (/home/Daniel241121/Fundamentos-INGESOFT/smartpick-backend/src/controllers/AuthController.js:44:22)
+[2025-11-10T04:25:02.468Z] ERROR: Error fetching review_analytics - invalid input syntax for type uuid: "<ID-NUEVO>"
