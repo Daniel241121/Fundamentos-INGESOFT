@@ -5,10 +5,12 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",
+    "dev": "node server.js",
     "test": "jest",
     "migrate": "node src/config/migrations.js",
-    "test:db": "node test-db-pg.js"
+    "test:db": "node test-supabase.js",
+    "seed:reviews": "node src/scripts/seed-reviews.js",
+    "seed:prices": "node src/scripts/seed-price-history.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.80.0",
@@ -26,7 +28,7 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
-    "nodemon": "^3.0.1",
+    "nodemon": "^3.1.10",
     "supertest": "^6.3.3"
   }
 }

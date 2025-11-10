@@ -37,13 +37,32 @@ app.use('/api/products', productRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/admin', adminRoutes);
 
-// Middleware de errores
-app.use((error, req, res, next) => {
-  logger.error('Unhandled error', error);
-  res.status(error.status || 500).json({
-    error: error.message || 'Internal server error',
-  });
+// Error handling middleware (más defensivo)
+app.use((err, req, res, next) => {
+  try {
+    logger.error('Unhandled error', err);
+  } catch (logErr) {
+    console.error('Logger failed', logErr);
+  }
+
+  if (res.headersSent) {
+    // Si Express ya empezó a responder, delega al manejador por defecto
+    return next(err);
+  }
+
+  res.status(err && err.status ? err.status : 500);
+
+  try {
+    res.json({
+      error: err && err.message ? err.message : 'Internal server error',
+    });
+  } catch (jsonErr) {
+    // Último recurso: texto plano
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+    res.end('Internal server error');
+  }
 });
+
 
 // 404 final
 app.use((req, res) => {

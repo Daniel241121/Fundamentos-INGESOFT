@@ -1,12 +1,19 @@
+// src/middleware/AuthMiddleware.js
 const jwt = require('jsonwebtoken');
 const logger = require('../utils/logger');
 
 class AuthMiddleware {
   static authenticateToken(req, res, next) {
     const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ');
 
-    if (!token) {
+    if (!authHeader) {
+      return res.status(401).json({ error: 'Access token required' });
+    }
+
+    // Esperamos: "Bearer <token>"
+    const [scheme, token] = authHeader.split(' ');
+
+    if (scheme !== 'Bearer' || !token) {
       return res.status(401).json({ error: 'Access token required' });
     }
 
@@ -16,7 +23,7 @@ class AuthMiddleware {
       next();
     } catch (error) {
       logger.error('Token verification failed', error);
-      res.status(403).json({ error: 'Invalid or expired token' });
+      return res.status(403).json({ error: 'Invalid or expired token' });
     }
   }
 
